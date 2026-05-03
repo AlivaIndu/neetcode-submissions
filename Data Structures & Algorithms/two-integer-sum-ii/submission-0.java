@@ -1,0 +1,18 @@
+class Solution {
+    public int[] twoSum(int[] num, int target) {
+        int n=num.length;
+        int l=0,r=n-1;
+        while(l<r){
+            int sum=num[l]+num[r];
+            if(sum==target)
+                return new int[]{l+1,r+1};
+            else{
+                if(sum>target)
+                    r--;
+                else
+                    l++;
+            }
+        }
+        return new int[]{};
+    }
+}
